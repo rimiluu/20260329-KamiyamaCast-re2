@@ -1,0 +1,129 @@
+/* nav.css */
+nav.default {
+    background-color: #fffffc;
+    color: #080505;
+}
+nav.default a {
+    color: #080505;
+}
+nav.default::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+nav.inverted {
+    background-color: #080505;
+    color: #fffffc;
+}
+nav.inverted a {
+    color: #fffffc;
+}
+nav.inverted::after {
+    background: linear-gradient(to bottom, rgba(8, 5, 5, 1), rgba(51, 51, 51, 0)); 
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+nav::after { /* グラデーション */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px; /* ヘッダーの下部から30px下にグラデーション */
+    height: 30px;
+    pointer-events: none; /* グラデーション部分でのクリックを無効化 */
+    z-index: -1; /* ヘッダーの背面に配置 */
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 120px 0 90px;
+    width: 100%;
+}
+
+/* headerのleft */
+
+.nav-left a img{
+    left: 0;
+    display: flex;
+    width: 200px;
+    height: auto;
+}
+
+/* headerのright */
+
+.nav-right {
+    right: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+
+nav li {
+    margin-left: 40px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #7e7e7e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+
+nav {
+    display: none;
+}
+
+.nav-wrapper {
+    display: none;
+}
+
+}   

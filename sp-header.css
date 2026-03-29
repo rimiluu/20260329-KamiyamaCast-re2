@@ -1,0 +1,155 @@
+/* 調整用スタイル */
+
+/* ヘッダー */
+.sp-header {
+    background-color: white;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ヘッダー全体を中央揃え */
+    padding: 0 10px;
+    box-sizing: border-box;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* ハンバーガーメニューを右端に配置 */
+    width: 100%;
+    position: relative;
+}
+
+/* ヘッダーのロゴ部分 */
+.header-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.header-logo a img {
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+/* ハンバーガーメニュー */
+.header__hamburger {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    margin-right: 10px; /* 右端に余白を追加 */
+    box-sizing: border-box;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background-color: #000; /* 初期状態では黒 */
+    margin: 4px 0;
+    transition: all 0.4s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ヘッダーのナビ部分 */
+.header__nav {
+    position: fixed;
+    top: 48px;
+    right: 0;
+    left: 0;
+    height: calc(100vh - 48px);
+    background-color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    z-index: 998; /* sp-header の下に配置 */
+}
+
+.header__nav.active {
+    transform: translateY(0);
+}
+
+.nav-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-items__item {
+    margin: 16px 0;
+}
+
+.nav-items__item a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* スクリーン幅が広い場合は非表示 */
+@media screen and (min-width: 431px) {
+    .sp-header {
+        display: none;
+    }
+    .header__nav {
+        display: none;
+    }
+}
+
+/* ナビゲーションのスタイル */
+.sp-header.default {
+    background-color: #fffffc;
+    color: #080505;
+}
+.sp-header.default a {
+    color: #080505;
+}
+.sp-header.default::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.sp-header.inverted {
+    background-color: #080505;
+    color: #fffffc;
+}
+.sp-header.inverted a {
+    color: #fffffc;
+}
+.sp-header.inverted .hamburger span {
+    background-color: #fff; /* inverted状態では白 */
+}
+.sp-header.inverted .header-logo a img {
+    filter: invert(1); /* ロゴ画像を白に変更 */
+}
+.sp-header.inverted::after {
+    background: linear-gradient(to bottom, rgba(8, 5, 5, 1), rgba(51, 51, 51, 0)); 
+}
