@@ -1,0 +1,39 @@
+/* Custom Cursor Style */
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #080505;
+    position: fixed;
+    pointer-events: none; /* Ignore the cursor when interacting */
+    z-index: 1000;
+    transition: transform 0.4s ease-out, background-color 0.3s;
+}
+
+
+/* Style to hide cursor */
+.hide-cursor {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        cursor: none; /* Hide default cursor */
+    }
+    
+    .custom-cursor {
+        display: none;
+    }
+    
+    
+    /* Style to hide cursor */
+    .hide-cursor {
+        display: none;
+    }
+
+}

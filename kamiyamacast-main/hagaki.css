@@ -1,0 +1,238 @@
+.hagaki-top {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 20px;
+    margin: 120px auto 24px auto;
+    text-align: center;
+}
+
+.hagaki {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffffc;
+    margin: 0;
+    padding: 20px 0 100px 0;
+}
+
+form {
+    padding: 20px 20px 0 20px;
+    width: 70%;
+}
+
+.hagaki-item {
+    margin-bottom: 36px;
+}
+
+label,
+.hagaki-label {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+
+input[type="text"],
+textarea,
+select {
+    padding: 14px 14px;
+    margin-bottom: 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: F9F3ED;
+    color: #080505;
+}
+
+input[type="text"] {
+    height: 52px;
+}
+
+textarea {
+    min-height: 170px;
+    line-height: 1.7;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+input[type="submit"] {
+    background-color: #080505;
+    color: #fffffc;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50%;
+    margin: 8px auto 0 auto;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #323232;
+}
+
+.program-select {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.program-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 182px;
+    padding: 22px 12px 20px;
+    border: 1px solid #cfcfcf;
+    border-radius: 14px;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-2px);
+    border-color: #888;
+}
+
+.program-card input {
+    display: none;
+}
+
+.program-card img {
+    width: 92px;
+    height: 92px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    background: F9F3ED;
+}
+
+.program-card span {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #111;
+    font-weight: 500;
+}
+
+/* 選択中 */
+.program-card:has(input:checked) {
+    border: 2px solid #111;
+    background: F9F3ED;
+}
+
+.program-card:has(input:checked) span {
+    font-weight: 700;
+}
+
+.hagaki-audio {
+    margin-top: 4px;
+}
+
+.hagaki-audio-button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 14px 0 24px 0;
+}
+
+#audioPreview {
+    display: block;
+    width: 100%;
+}
+
+.hagaki-submit {
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .hagaki-top {
+        width: 90%;
+        margin: 80px auto 20px auto;
+        padding: 10px;
+    }
+
+    .hagaki {
+        padding: 10px 0 70px 0;
+    }
+
+    form {
+        width: 90%;
+        padding: 10px 0 0 0;
+    }
+
+    .hagaki-item {
+        margin-bottom: 30px;
+    }
+
+    label,
+    .hagaki-label {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+        padding: 13px 12px;
+    }
+
+    input[type="text"] {
+        height: 48px;
+    }
+
+    textarea {
+        min-height: 150px;
+    }
+
+    .program-select {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 4px;
+    }
+
+    .program-card {
+        min-height: 165px;
+        padding: 18px 10px 16px;
+        gap: 12px;
+    }
+
+    .program-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .program-card span {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .hagaki-audio-button {
+        margin: 12px 0 20px 0;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        margin-top: 4px;
+    }
+}

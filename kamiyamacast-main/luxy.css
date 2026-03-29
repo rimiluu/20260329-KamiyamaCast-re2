@@ -1,0 +1,10 @@
+.luxy-enabled {
+  position: relative;
+  z-index: 10;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.non-luxy-element {
+  position: absolute;
+  z-index: 5;
+}
