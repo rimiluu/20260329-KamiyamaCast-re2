@@ -8,9 +8,9 @@ document.addEventListener('scroll', function() {
 
     if (window.scrollY >= programSectionTop && window.scrollY < programSectionBottom) {
         nav.classList.add('inverted');
-        img.src = 'img/header/Podcast_logo_zentai_white.png';
+        img.src = 'img/header/logo_white_2.png';
     } else {
         nav.classList.remove('inverted');
-        img.src = 'img/header/Podcast_logo_black_2.png';
+        img.src = 'img/header/logo_black_2.png';
     }
 });
