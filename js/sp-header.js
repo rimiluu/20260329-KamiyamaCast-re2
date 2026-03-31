@@ -24,6 +24,6 @@ document.addEventListener('scroll', function() {
         img.src = 'img/header/logo_white_2.png';
     } else {
         nav.classList.remove('inverted');
-        img.src = 'img/header/logo_black_2.png';
+        img.src = 'img/header/logo_black_3.png';
     }
 });
