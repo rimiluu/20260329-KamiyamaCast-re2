@@ -61,7 +61,7 @@ nav::after { /* グラデーション */
 .nav-left a img{
     left: 0;
     display: flex;
-    width: 200px;
+    width: 260px;
     height: auto;
 }
 
